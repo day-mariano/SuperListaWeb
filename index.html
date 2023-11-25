@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="app.js" defer></script>
+  <title>SuperLista</title>
+</head>
+<body>
+  <main>
+    <h1>SuperLista</h1>
+    <p>Sua lista de supermercado mais organizada</p>
+    
+    <form action="">
+      <input type="text" id="novoProduto" placeholder="Adicione um produto">
+      <input type="submit" onsubmit="adicionarProduto(novoProduto.value)" value="Adicionar">
+    </form>
+    <ul id="lista">
+    </ul>
+  </main>
+</body>
+</html>
