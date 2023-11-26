@@ -1,5 +1,5 @@
 const listaCompras = [];
-const elementoLista = document.getElementΒyId("lista"); //ul
+const elementoLista = document.getElementById("lista")
 
 document
   .getElementById("formAdicionar")
@@ -9,7 +9,10 @@ function adicionarProduto(event) {
   event.preventDefault();
 
   const elementoProduto = document.getElementById("inputAdicionar"); //input
+
+
   const novoProduto = elementoProduto.value;
+
   listaCompras.push(novoProduto);
 
   elementoLista.innerHTML += `<li id="liProduto${novoProduto}"> 
@@ -17,20 +20,15 @@ function adicionarProduto(event) {
     <input type="text" value="${novoProduto}" id="${novoProduto}">
     <button id="buttonApagar" onclick="apagarProduto(${novoProduto}, liProduto${novoProduto})"> Apagar </button>
   </li>`;
-
   elementoProduto.value = "";
 }
 
 function apagarProduto(novoProduto) {
   let produtoApagado = novoProduto.value
-
   listaCompras.splice(produtoApagado, 1)
-  console.log(listaCompras)
 
   let nomeDoLi = "liProduto" + novoProduto.value
-  console.log(nomeDoLi)
-
   let elementoLiAtual = document.getElementById(nomeDoLi)
-  console.log(elementoLiAtual)
+  
   elementoLista.removeChild(elementoLiAtual)
 }
