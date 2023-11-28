@@ -29,6 +29,6 @@ function apagarProduto(novoProduto) {
 
   let nomeDoLi = "liProduto" + novoProduto.value
   let elementoLiAtual = document.getElementById(nomeDoLi)
-  
+   
   elementoLista.removeChild(elementoLiAtual)
 }
