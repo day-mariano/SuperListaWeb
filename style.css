@@ -1,29 +1,118 @@
 body {
-  background-image: linear-gradient(to top, #3b8686, #509c91, #69b19a, #87c6a1, #a8dba8);background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to top,
+    #3b8686,
+    #509c91,
+    #69b19a,
+    #87c6a1,
+    #a8dba8
+  );
+  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgb(49, 72, 66);
+  font-size: 20px;
 }
 
 main {
   padding: 2rem;
-/* From https://css.glass */
-background: rgba(255, 255, 255, 0.47);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(14.7px);
--webkit-backdrop-filter: blur(14.7px);
-border: 1px solid rgba(255, 255, 255, 0.44);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.47);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.7px);
+  -webkit-backdrop-filter: blur(14.7px);
+  border: 1px solid rgba(255, 255, 255, 0.44);
 }
 
 .divTitle {
   display: flex;
+  /* justify-content: center; */
+  align-items: flex-start;
 }
 
 .divTitle img {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
+  margin-right: 2rem;
+}
+#inputAdicionar {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: rgb(49, 72, 66);
+}
+
+#buttonAdicionar {
+  padding: 10px;
+  border-radius: 8px;
+  border-style: none;
+  background-color: rgb(49, 72, 66);
+  color: white;
+  font-size: 16px;
+}
+
+#lista {
+  display: flex;
+  flex-direction: column;
   margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.liProdutos {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inputProdutos {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: rgb(126, 165, 155);
+  margin: 4px;
+}
+
+.inputProdutos:checked {
+  background-color: rgb(152, 162, 162);
+  text-decoration: line-through;
+}
+
+#buttonApagar {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  border-style: none;
+  background-color: rgb(194, 31, 31);
+  color: white;
+  cursor: pointer;
+}
+
+.check {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 3px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check:checked::after {
+  content: "✔";
+  font-size: 20px;
+  color: #1c7b68;
 }

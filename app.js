@@ -15,10 +15,10 @@ function adicionarProduto(event) {
 
   listaCompras.push(novoProduto);
 
-  elementoLista.innerHTML += `<li id="liProduto${novoProduto}"> 
+  elementoLista.innerHTML += `<li id="liProduto${novoProduto}" class="liProdutos"> 
     <input class="check" type="checkbox" id="status">
-    <input type="text" value="${novoProduto}" id="${novoProduto}">
-    <button id="buttonApagar" onclick="apagarProduto(${novoProduto}, liProduto${novoProduto})"> Apagar </button>
+    <input type="text" value="${novoProduto}" id="${novoProduto}" class="inputProdutos">
+    <button id="buttonApagar" onclick="apagarProduto(${novoProduto}, liProduto${novoProduto})"> x </button>
   </li>`;
   elementoProduto.value = "";
 }
